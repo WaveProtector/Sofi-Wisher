@@ -28,7 +28,7 @@ const commands = [
     },
     {
         name: 'get-series',
-        description : 'Gets the desired series from a given user!',
+        description : 'Gets the registered series from a given user!',
         options: [
             {
                 name: 'user',

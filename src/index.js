@@ -38,20 +38,6 @@ const client = new Client({
     ]
 });
 
-// Preprocess the .jpg image
-/* async function preprocessImage(inputImagePath, outputImagePath) {
-  try {
-    await sharp(inputImagePath)
-      .grayscale()
-      //.normalize() // Enhance contrast
-      //.blur() // Apply blur for noise reduction
-      .toFile(outputImagePath);
-    console.log('Preprocessing complete.');
-  } catch (err) {
-    throw new Error('Error preprocessing image:', err);
-  }
-} */
-
 // Function to download the image file locally
 async function downloadImage(url, outputPath) {
   const response = await axios({
@@ -106,9 +92,6 @@ async function convertToImage(imageUrl) {
       console.log("Loading converted image...");
       const imageBuffer = fs.readFileSync(outputPath);
       console.log("Converted image loaded successfully.");
-
-      // Further preprocessing steps...
-      // ...
 
   } catch (error) {
       console.error('Error preprocessing image:', error);
