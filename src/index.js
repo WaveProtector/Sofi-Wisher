@@ -319,6 +319,9 @@ client.on('messageCreate', async (msg) => {
             const seriesCollection = mongo.db('SofiWisher').collection('series');
             const allUsers = await seriesCollection.find({}).toArray();
 
+            // Set to store unique user IDs that have been notified
+            const notifiedUsers = new Set();
+
             // Iterate over each user
             for (const user of allUsers) {
               // Iterate over each extracted text
@@ -329,7 +332,7 @@ client.on('messageCreate', async (msg) => {
 
                 // Check if any of the extracted text (in lowercase) matches the user's series (also converted to lowercase)
                 const matchedSeries = userSeriesList.filter(series => textLowerCase.includes(series));
-                if (matchedSeries.length > 0) {
+                if (matchedSeries.length > 0 && !notifiedUsers.has(user.userId)) {
                   console.log('something came up :)');
                   // Send a Discord message to the user
                   //const userToMessage = await client.users.fetch(user.userId);
