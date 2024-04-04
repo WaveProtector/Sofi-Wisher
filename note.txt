@@ -1,1 +1,0 @@
-"^5.0.5" was the tesseract.js version we had previously
