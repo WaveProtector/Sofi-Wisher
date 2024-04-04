@@ -1,0 +1,83 @@
+SOFI message:
+ <ref *1> Message {
+  channelId: '1223404557258719376',
+  guildId: '1223404554557849751',
+  id: '1224122440792281180',
+  createdTimestamp: 1711923932980,
+  type: 19,
+  system: false,
+  content: '<@239079265138769920> is **dropping** cards',
+  author: User {
+    id: '853629533855809596',
+    bot: true,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 65536 },
+    username: 'SOFI',
+    globalName: null,
+    discriminator: '5472',
+    avatar: 'a_4e9b12420d607a91fe65c3f7a035398f',
+    banner: undefined,
+    accentColor: undefined,
+    avatarDecoration: null
+  },
+  pinned: false,
+  tts: false,
+  nonce: null,
+  embeds: [],
+  components: [ ActionRow { data: [Object], components: [Array] } ],
+  attachments: Collection(1) [Map] {
+    '1224122440964112434' => Attachment {
+      attachment: 'https://cdn.discordapp.com/attachments/1223404557258719376/1224122440964112434/33c5616b-bd04-42c2-951f-0913e444e459.webp?ex=661c57dd&is=6609e2dd&hm=e0b53f0f0cbf1e224f2ced7257d38167a3dc91f2150fd98aee682871805c145b&',
+      name: '33c5616b-bd04-42c2-951f-0913e444e459.webp',
+      id: '1224122440964112434',
+      size: 131942,
+      url: 'https://cdn.discordapp.com/attachments/1223404557258719376/1224122440964112434/33c5616b-bd04-42c2-951f-0913e444e459.webp?ex=661c57dd&is=6609e2dd&hm=e0b53f0f0cbf1e224f2ced7257d38167a3dc91f2150fd98aee682871805c145b&',
+      proxyURL: 'https://media.discordapp.net/attachments/1223404557258719376/1224122440964112434/33c5616b-bd04-42c2-951f-0913e444e459.webp?ex=661c57dd&is=6609e2dd&hm=e0b53f0f0cbf1e224f2ced7257d38167a3dc91f2150fd98aee682871805c145b&',
+      height: 524,
+      width: 1008,
+      contentType: 'image/webp',
+      description: null,
+      ephemeral: false,
+      duration: null,
+      waveform: null
+    }
+  },
+  stickers: Collection(0) [Map] {},
+  position: null,
+  roleSubscriptionData: null,
+  editedTimestamp: null,
+  reactions: ReactionManager { message: [Circular *1] },
+  mentions: MessageMentions {
+    everyone: false,
+    users: Collection(1) [Map] { '239079265138769920' => [User] },
+    roles: Collection(0) [Map] {},
+    _members: null,
+    _channels: null,
+    _parsedUsers: null,
+    crosspostedChannels: Collection(0) [Map] {},
+    repliedUser: User {
+      id: '239079265138769920',
+      bot: false,
+      system: false,
+      flags: [UserFlagsBitField],
+      username: 'waveprotector',
+      globalName: 'Waver',
+      discriminator: '0',
+      avatar: 'ec3eb0c52e611abc6cfe4e435bcc69f6',
+      banner: undefined,
+      accentColor: undefined,
+      avatarDecoration: null
+    }
+  },
+  webhookId: null,
+  groupActivityApplication: null,
+  applicationId: null,
+  activity: null,
+  flags: MessageFlagsBitField { bitfield: 0 },
+  reference: {
+    channelId: '1223404557258719376',
+    guildId: '1223404554557849751',
+    messageId: '1224122437558472765'
+  },
+  interaction: null
+}
