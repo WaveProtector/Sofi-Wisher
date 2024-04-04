@@ -294,7 +294,7 @@ client.on('interactionCreate', async (interaction) => {
           const userSeries = await seriesCollection.findOne({ userId: getUserId });
     
           if (!userSeries || userSeries.series.length === 0) {
-              await interaction.reply("This user hasn't registered any series yet.");
+              await interaction.reply(`The user ${interaction.options.getUser('user').displayName} hasn't registered any series yet.`);
           } else {
               const userSeriesList = userSeries.series.join(', ');
               await interaction.reply(`Series registered by ${interaction.options.getUser('user').displayName}: ${userSeriesList}`);
@@ -332,7 +332,7 @@ client.on('messageCreate', async (msg) => {
                 if (matchedSeries.length > 0) {
                   console.log('something came up :)');
                   // Send a Discord message to the user
-                  const userToMessage = await client.users.fetch(user.userId);
+                  const userToMessage = await client.users.fetch(user);
                   await msg.reply(`<@${userToMessage.userId}> the series ${matchedSeries.join(', ')} have been found !`);
                 } else {
                   console.log('nothing came up :(');
