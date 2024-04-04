@@ -333,6 +333,7 @@ client.on('messageCreate', async (msg) => {
                   console.log('something came up :)');
                   // Send a Discord message to the user
                   const userToMessage = await client.users.fetch(user.userId);
+                  console.log(`user of the found series ${userToMessage}`);
                   await msg.reply(`<@${userToMessage.userId}> the series ${matchedSeries.join(', ')} have been found !`);
                 } //else {
                   //console.log('nothing came up :(');
