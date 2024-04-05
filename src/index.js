@@ -336,9 +336,11 @@ client.on('messageCreate', async (msg) => {
                   console.log('something came up :)');
                   // Send a Discord message to the user
                   //const userToMessage = await client.users.fetch(user.userId);
-                  const userToMessage = client.users.cache.get(user.userId);
-                  console.log(`user of the found series ${userToMessage}`);
-                  await msg.reply(`${userToMessage} the series ${matchedSeries.join(', ')} have been found !`);
+                  const userToMessage = await client.users.fetch(user.userId);
+                  console.log(`user of the found series ${userToMessage.tag}`);
+                  await msg.reply(`<@${userToMessage.id}> the series ${matchedSeries.join(', ')} have been found !`);
+                  // Add the user ID to the set of notified users
+                  notifiedUsers.add(user.userId);
                 } //else {
                   //console.log('nothing came up :(');
                 //}
